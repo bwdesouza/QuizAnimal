@@ -1,0 +1,7 @@
+{
+  "name": "QuizAnimal",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
