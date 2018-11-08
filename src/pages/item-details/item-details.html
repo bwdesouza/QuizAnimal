@@ -9,10 +9,13 @@
 
 <ion-content>
   <h3 text-center *ngIf="selectedItem">
-    {{selectedItem.title}}
-    <ion-icon [name]="selectedItem.icon"></ion-icon>
+    {{selectedItem.titulo}}
   </h3>
+  <ion-col col-3 style="margin-left: 30%" >
+    <img [src]="selectedItem.caminhoFoto" />
+  </ion-col>
+
   <h4 text-center *ngIf="selectedItem">
-    You navigated here from <b>{{selectedItem.title}}</b>
+    You navigated here from <b>{{selectedItem.titulo}}</b>
   </h4>
 </ion-content>
