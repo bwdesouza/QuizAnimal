@@ -1,0 +1,38 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Conclusão</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-row>  
+      <ion-col col-12>
+        <h3 text-center>
+          {{ titulo }}
+        </h3>
+      </ion-col>
+    </ion-row>  
+    
+    <ion-row>  
+      <ion-col col-12>
+        <h4 text-center>
+          Você teve <b> {{ acertos }} </b>acerto(s)!
+        </h4>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>  
+      <ion-col col-10 style="margin: 30px;">    
+        <img [src]="imagem"/>
+      </ion-col>
+    </ion-row>
+      
+    <ion-row style="margin-left: 60px;">
+      <button ion-button round outline (click)="comecarNovamente()">Começar Novamente</button>
+    </ion-row>
+
+  </ion-content>
