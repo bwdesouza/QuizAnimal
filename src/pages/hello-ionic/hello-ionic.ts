@@ -14,10 +14,11 @@ export class HelloIonicPage {
 
   }
 
-  chamaQuiz(animal, caminhoFoto){
+  chamaQuiz(animal, caminhoFoto, respostas){
     this.item = {
       titulo: animal,
-      caminhoFoto: caminhoFoto
+      caminhoFoto: caminhoFoto,
+      respostas: respostas
     }
     
     this.navCtrl.push(ItemDetailsPage, {
