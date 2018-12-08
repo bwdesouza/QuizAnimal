@@ -19,8 +19,10 @@ export class HelloIonicPage {
   }	
   
   ionViewDidLoad() {
-		this.nativeAudio.preloadSimple('uniqueId1','/assets/musicas/musica1.mp3');
-		this.nativeAudio.play('uniqueId1');
+		this.nativeAudio.preloadSimple('audio1','../../assets/musicas/musica2.mp3');
+    this.nativeAudio.play('audio1', () => console.log('uniqueId1 is done playing'));
+    
+    // this.nativeAudio.loop('audio1');
 		}
 
   iniciaMusica(){

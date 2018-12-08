@@ -13,6 +13,7 @@ import { ConclusaoPage } from '../pages/conclusao/conclusao';
 import { RestProvider } from '../providers/rest';
 import { HttpClientModule } from '@angular/common/http';
 import { NativeAudio } from '@ionic-native/native-audio';
+import { IonicAudioModule, defaultAudioProviderFactory } from 'ionic-audio';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { NativeAudio } from '@ionic-native/native-audio';
   imports: [
     BrowserModule,
     HttpClientModule,
+    IonicAudioModule.forRoot(defaultAudioProviderFactory),
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
