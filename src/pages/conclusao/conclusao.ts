@@ -43,7 +43,7 @@ export class ConclusaoPage {
   }
 
   comecarNovamente(){ 
-    this.navCtrl.push(HelloIonicPage);    
+    this.navCtrl.setRoot(HelloIonicPage);    
   }
 
   calcularResposta(){

@@ -63,7 +63,7 @@ export class ItemDetailsPage {
         imgD: "../../assets/imgs/quiz/nenhuma.png"
       };  
     }else if(questao == 3){      
-      this.navCtrl.push(ConclusaoPage, {
+      this.navCtrl.setRoot(ConclusaoPage, {
         respostasDadas: this.respostas,
         itemRespostas: this.selectedItem.respostas
       });

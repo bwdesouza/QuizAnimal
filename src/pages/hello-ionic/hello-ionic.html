@@ -1,10 +1,12 @@
 <ion-header>
-  <!-- <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-  </ion-navbar> -->
-  <ion-title text-center>Quiz Animal</ion-title>
+  <ion-navbar>
+    <ion-title text-center>Quiz Animal</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="mutarSom()">
+        <ion-icon [name]="iconVolume"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
 </ion-header>
 
 

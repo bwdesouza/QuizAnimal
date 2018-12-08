@@ -12,6 +12,8 @@ export class HelloIonicPage {
 
   item : any;
   animais : any;
+  somAtivo: boolean = true;
+  iconVolume: string = "volume-up";
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private restProvider: RestProvider, private nativeAudio: NativeAudio) {
     this.iniciaMusica();
@@ -19,10 +21,10 @@ export class HelloIonicPage {
   }	
   
   ionViewDidLoad() {
-		this.nativeAudio.preloadSimple('audio1','../../assets/musicas/musica2.mp3');
-    this.nativeAudio.play('audio1', () => console.log('uniqueId1 is done playing'));
+		this.nativeAudio.preloadSimple('audio1','../../assets/musicas/musica3.mp3');
+    // this.nativeAudio.play('audio1', () => console.log('uniqueId1 is done playing'));
     
-    // this.nativeAudio.loop('audio1');
+    this.nativeAudio.loop('audio1');
 		}
 
   iniciaMusica(){
@@ -60,8 +62,21 @@ export class HelloIonicPage {
       respostas: respostas
     }
     
-    this.navCtrl.push(ItemDetailsPage, {
+    this.navCtrl.setRoot(ItemDetailsPage, {
       item: this.item
     });
+  }
+
+  mutarSom(){
+    if(this.somAtivo){
+      this.somAtivo = false;
+      this.iconVolume = "volume-off";
+      this.nativeAudio.stop('audio1');
+    }
+    else{
+      this.somAtivo = true;
+      this.iconVolume = "volume-up";
+      this.nativeAudio.loop('audio1');
+    }
   }
 }
