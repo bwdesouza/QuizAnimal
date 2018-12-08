@@ -1,35 +1,36 @@
 <ion-header>
-  <ion-navbar>
-    <!-- <button ion-button menuToggle>
+  <!-- <ion-navbar>
+    <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
-    </button> -->
-    <ion-title>Quiz Animal</ion-title>
-  </ion-navbar>
+    </button>
+  </ion-navbar> -->
+  <ion-title text-center>Quiz Animal</ion-title>
 </ion-header>
 
 
 <ion-content padding>
 
   <ion-card>
-    <ion-card-header>
+    <ion-card-header text-center>
       Escolha um animal
     </ion-card-header>
 
     <ion-list>
 
-      <button ion-item 
-      (click)="chamaQuiz('Elefante', '../../assets/imgs/animais/elephant.png', ['4','Pasto','Terra'])">
+
+      <button ion-item *ngFor="let animal of animais"
+      (click)="chamaQuiz(animal.nome , animal.imagem , animal.respostas )">
         <ion-row>
           <ion-col col-3>
-            <img src="../../assets/imgs/animais/elephant.png" />
+            <img src="{{animal.imagem}}" />
           </ion-col>
           <ion-col col-9 text-center style="margin-top:10px">
-            Elefante
+            {{animal.nome}}
           </ion-col>
         </ion-row>
       </button>
 
-      <button ion-item 
+      <!-- <button ion-item 
       (click)="chamaQuiz('Vaca', '../../assets/imgs/animais/cow.png', ['4','Pasto','Terra'])">
           <ion-row>
             <ion-col col-3>
@@ -116,7 +117,7 @@
           </ion-row>
         </button>
 
-        <!-- <button ion-item 
+        <button ion-item 
         (click)="chamaQuiz('Cobra', '../../assets/imgs/animais/snake.png', ['4','Pasto','Terra'])">
           <ion-row>
             <ion-col col-3>
@@ -126,7 +127,7 @@
               Cobra
             </ion-col>
           </ion-row>
-        </button> -->
+        </button>
 
         <button ion-item 
         (click)="chamaQuiz('Tigre', '../../assets/imgs/animais/tiger.png', ['4','Carne','Terra'])">
@@ -150,7 +151,7 @@
               Baleia
             </ion-col>
           </ion-row>
-        </button>
+        </button> -->
 
     </ion-list>
   </ion-card>

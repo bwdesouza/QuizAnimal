@@ -20,11 +20,15 @@ export class ItemDetailsPage {
 
     this.quiz = {
       num: 1,
-      questao: "Quantas patas ele(a) tem?",
-      tituloA: "2",
-      imgA: "../../assets/imgs/quiz/2patas.png",
-      tituloB: "4",
-      imgB: "../../assets/imgs/quiz/4patas.png"
+      questao: "Ele(a) tem?",
+      tituloA: "Patas",
+      imgA: "../../assets/imgs/quiz/patas.png",
+      tituloB: "Asas",
+      imgB: "../../assets/imgs/quiz/asas.png",
+      tituloC: "Barbatanas",
+      imgC: "../../assets/imgs/quiz/barbatanas.png",
+      tituloD: "Nenhum",
+      imgD: "../../assets/imgs/quiz/nenhuma.png"
     } ;    
       
   }
@@ -35,20 +39,28 @@ export class ItemDetailsPage {
     if(questao == 1){
       this.quiz = {
         num: 2,
-        questao: "O que ele come?",
+        questao: "O que ele(a) come?",
         tituloA: "Pasto",
         imgA: "../../assets/imgs/quiz/grass.png",
         tituloB: "Carne",
-        imgB: "../../assets/imgs/quiz/meat.png"
+        imgB: "../../assets/imgs/quiz/butcher.png",
+        tituloC: "Ração",
+        imgC: "../../assets/imgs/quiz/canned-food.png",
+        tituloD: "Nenhum",
+        imgD: "../../assets/imgs/quiz/nenhuma.png"
       };      
     }else if(questao == 2){
       this.quiz = {
         num: 3,
-        questao: "Onde ele vive?",
+        questao: "Onde ele(a) vive?",
         tituloA: "Terra",
-        imgA: "../../assets/imgs/quiz/trees.png",
-        tituloB: "Água",
-        imgB: "../../assets/imgs/quiz/beach.png"
+        imgA: "../../assets/imgs/quiz/forest.png",
+        tituloB: "Aguá",
+        imgB: "../../assets/imgs/quiz/beach.png",
+        tituloC: "Céu",
+        imgC: "../../assets/imgs/quiz/desert.png",
+        tituloD: "Nenhum",
+        imgD: "../../assets/imgs/quiz/nenhuma.png"
       };  
     }else if(questao == 3){      
       this.navCtrl.push(ConclusaoPage, {

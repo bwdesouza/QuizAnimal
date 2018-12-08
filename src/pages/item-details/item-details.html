@@ -1,10 +1,10 @@
 <ion-header>
-  <ion-navbar>
+  <!-- <ion-navbar>
     <button menuToggle *ngIf="!selectedItem">
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Item Details</ion-title>
-  </ion-navbar>
+  </ion-navbar> -->
+  <ion-title text-center>Perguntas</ion-title>
 </ion-header>
 
 <ion-content>
@@ -12,7 +12,7 @@
     {{selectedItem.titulo}}
   </h3>
   <ion-col col-3 style="margin-left: 30%" >
-    <img [src]="selectedItem.caminhoFoto" />
+    <img [src]="selectedItem.caminhoFoto" style="max-width:50%"/>
   </ion-col>
 
   <h4 text-center *ngIf="selectedItem">
@@ -35,6 +35,25 @@
     <ion-col col-2></ion-col>
     <ion-col col-4 (click)="responder(quiz.num, quiz.tituloB)">
       <img [src]="quiz.imgB"/>
+    </ion-col>
+  </ion-row>
+  
+  <ion-row>
+    <ion-col col-6 text-center>
+      <h1><b>{{ quiz.tituloC }}</b></h1>
+    </ion-col>
+    <ion-col col-6 text-center>
+      <h1><b>{{ quiz.tituloD }}</b></h1>
+    </ion-col>
+  </ion-row>
+  <ion-row>  
+    <ion-col col-1></ion-col>
+    <ion-col col-4 (click)="responder(quiz.num, quiz.tituloC)">    
+      <img [src]="quiz.imgC"/>
+    </ion-col>
+    <ion-col col-2></ion-col>
+    <ion-col col-4 (click)="responder(quiz.num, quiz.tituloD)">
+      <img [src]="quiz.imgD"/>
     </ion-col>
   </ion-row>
 

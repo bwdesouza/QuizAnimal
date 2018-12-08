@@ -20,6 +20,15 @@ export class ConclusaoPage {
   titulo: any;
   imagem: any;
   acertos: number;
+  questao1: string = "1) Ele(a) tem?";
+  questao2: string = "2) O que ele(a) come?";
+  questao3: string = "3) Onde ele(a) vive?";
+  resposta1: string;
+  resposta2: string;
+  resposta3: string;
+  image1: any = "../../assets/imgs/quiz/error.png";
+  image2: any = "../../assets/imgs/quiz/error.png";
+  image3: any = "../../assets/imgs/quiz/error.png";
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     
@@ -39,14 +48,21 @@ export class ConclusaoPage {
 
   calcularResposta(){
     this.acertos = 0;
+    this.resposta1 = this.respostasDadas[0];
+    this.resposta2 = this.respostasDadas[1];
+    this.resposta3 = this.respostasDadas[2];
+    
     if(this.respostasDadas[0] == this.itemRespostas[0]){
       this.acertos++;
+      this.image1 = "../../assets/imgs/quiz/done.png";
     }
     if(this.respostasDadas[1] == this.itemRespostas[1]){
       this.acertos++;
+      this.image2 = "../../assets/imgs/quiz/done.png";
     }
     if(this.respostasDadas[2] == this.itemRespostas[2]){
       this.acertos++;
+      this.image3 = "../../assets/imgs/quiz/done.png";
     }
 
     if(this.acertos == 0){

@@ -1,9 +1,10 @@
 
 <ion-header>
-
+<!-- 
   <ion-navbar>
-    <ion-title>Conclusão</ion-title>
-  </ion-navbar>
+  </ion-navbar> -->
+
+  <ion-title text-center>Conclusão</ion-title>
 
 </ion-header>
 
@@ -29,6 +30,27 @@
       <ion-col col-10 style="margin: 30px;">    
         <img [src]="imagem"/>
       </ion-col>
+    </ion-row>
+    
+    <ion-row> 
+      <img [src]="image1" style="margin-top: 2%; height: 0%; margin-right: 2%;"/>
+      <h6 text-center>
+        <b>{{ questao1 }} R: {{ resposta1 }}</b>
+      </h6>
+    </ion-row>
+    
+    <ion-row> 
+      <img [src]="image2" style="margin-top: 2%; height: 0%; margin-right: 2%;"/>
+      <h6 text-center>
+        <b>{{ questao2 }} R: {{ resposta2 }}</b>
+      </h6>
+    </ion-row>
+    
+    <ion-row> 
+      <img [src]="image3" style="margin-top: 2%; height: 0%; margin-right: 2%;"/>
+      <h6 text-center>
+        <b>{{ questao3 }} R: {{ resposta3 }}</b>
+      </h6>
     </ion-row>
       
     <ion-row style="margin-left: 60px;">

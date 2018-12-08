@@ -10,6 +10,9 @@ import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ConclusaoPage } from '../pages/conclusao/conclusao';
+import { RestProvider } from '../providers/rest';
+import { HttpClientModule } from '@angular/common/http';
+import { NativeAudio } from '@ionic-native/native-audio';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,7 @@ import { ConclusaoPage } from '../pages/conclusao/conclusao';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -34,6 +38,8 @@ import { ConclusaoPage } from '../pages/conclusao/conclusao';
   providers: [
     StatusBar,
     SplashScreen,
+    RestProvider,
+    NativeAudio,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
