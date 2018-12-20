@@ -18,8 +18,7 @@
     </ion-card-header>
 
     <ion-list>
-
-
+      
       <button ion-item *ngFor="let animal of animais"
       (click)="chamaQuiz(animal.nome , animal.imagem , animal.respostas )">
         <ion-row>
@@ -31,129 +30,6 @@
           </ion-col>
         </ion-row>
       </button>
-
-      <!-- <button ion-item 
-      (click)="chamaQuiz('Vaca', '../../assets/imgs/animais/cow.png', ['4','Pasto','Terra'])">
-          <ion-row>
-            <ion-col col-3>
-              <img src="../../assets/imgs/animais/cow.png" />
-            </ion-col>
-            <ion-col col-9 text-center style="margin-top:10px">
-              Vaca
-            </ion-col>
-          </ion-row>
-        </button>        
-
-      <button ion-item 
-      (click)="chamaQuiz('Girafa', '../../assets/imgs/animais/giraffe.png', ['4','Pasto','Terra'])">
-          <ion-row>
-            <ion-col col-3>
-              <img src="../../assets/imgs/animais/giraffe.png" />
-            </ion-col>
-            <ion-col col-9 text-center style="margin-top:10px">
-              Girafa
-            </ion-col>
-          </ion-row>
-        </button>
-        
-
-      <button ion-item 
-      (click)="chamaQuiz('Cavalo', '../../assets/imgs/animais/horse.png', ['4','Pasto','Terra'])">
-          <ion-row>
-            <ion-col col-3>
-              <img src="../../assets/imgs/animais/horse.png" />
-            </ion-col>
-            <ion-col col-9 text-center style="margin-top:10px">
-              Cavalo
-            </ion-col>
-          </ion-row>
-        </button>
-        
-
-      <button ion-item 
-      (click)="chamaQuiz('Leão', '../../assets/imgs/animais/lion.png', ['4','Carne','Terra'])">
-          <ion-row>
-            <ion-col col-3>
-              <img src="../../assets/imgs/animais/lion.png" />
-            </ion-col>
-            <ion-col col-9 text-center style="margin-top:10px">
-              Leão
-            </ion-col>
-          </ion-row>
-        </button>
-        
-
-      <button ion-item 
-      (click)="chamaQuiz('Macaco', '../../assets/imgs/animais/monkey.png', ['2','Pasto','Terra'])">
-          <ion-row>
-            <ion-col col-3>
-              <img src="../../assets/imgs/animais/monkey.png" />
-            </ion-col>
-            <ion-col col-9 text-center style="margin-top:10px">
-              Macaco
-            </ion-col>
-          </ion-row>
-        </button>
-
-        <button ion-item 
-        (click)="chamaQuiz('Panda', '../../assets/imgs/animais/panda-bear.png', ['4','Pasto','Terra'])">
-          <ion-row>
-            <ion-col col-3>
-              <img src="../../assets/imgs/animais/panda-bear.png" />
-            </ion-col>
-            <ion-col col-9 text-center style="margin-top:10px">
-              Panda
-            </ion-col>
-          </ion-row>
-        </button>
-
-        <button ion-item 
-        (click)="chamaQuiz('Porco', '../../assets/imgs/animais/pig.png', ['4','Carne','Terra'])">
-          <ion-row>
-            <ion-col col-3>
-              <img src="../../assets/imgs/animais/pig.png" />
-            </ion-col>
-            <ion-col col-9 text-center style="margin-top:10px">
-              Porco
-            </ion-col>
-          </ion-row>
-        </button>
-
-        <button ion-item 
-        (click)="chamaQuiz('Cobra', '../../assets/imgs/animais/snake.png', ['4','Pasto','Terra'])">
-          <ion-row>
-            <ion-col col-3>
-              <img src="../../assets/imgs/animais/snake.png" />
-            </ion-col>
-            <ion-col col-9 text-center style="margin-top:10px">
-              Cobra
-            </ion-col>
-          </ion-row>
-        </button>
-
-        <button ion-item 
-        (click)="chamaQuiz('Tigre', '../../assets/imgs/animais/tiger.png', ['4','Carne','Terra'])">
-          <ion-row>
-            <ion-col col-3>
-              <img src="../../assets/imgs/animais/tiger.png" />
-            </ion-col>
-            <ion-col col-9 text-center style="margin-top:10px">
-              Tigre
-            </ion-col>
-          </ion-row>
-        </button>
-
-        <button ion-item 
-        (click)="chamaQuiz('Baleia', '../../assets/imgs/animais/whale.png', ['2','Pasto','Agua'])">
-          <ion-row>
-            <ion-col col-3>
-              <img src="../../assets/imgs/animais/whale.png" />
-            </ion-col>
-            <ion-col col-9 text-center style="margin-top:10px">
-              Baleia
-            </ion-col>
-          </ion-row>
-        </button> -->
 
     </ion-list>
   </ion-card>
